@@ -1,0 +1,96 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: story_001
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: weather_request
+    entities:
+    - location: "London"
+  - action: action_weather
+  - intent: affirm
+  - action: utter_happy
+
+- story: story_002
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: weather_request
+    entities:
+    - location: "Berlin"
+  - action: action_weather
+  - intent: affirm
+  - action: utter_happy
+
+- story: story_003
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: weather_request
+    entities:
+    - location: "Allendale"
+  - action: action_weather
+  - intent: affirm
+  - action: utter_happy
+
+- story: story_004
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: weather_request
+    entities:
+    - location: "Grand Rapids"
+  - action: action_weather
+  - intent: affirm
+  - action: utter_happy
+
+- story: story_005
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: weather_request
+    entities:
+    - location: "San Jose"
+  - action: action_weather
+  - intent: affirm
+  - action: utter_happy
+
+- story: story_006
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: weather_request
+    entities:
+    - location: "Detroit"
+  - action: action_weather
+  - intent: affirm
+  - action: utter_happy
